@@ -57,11 +57,29 @@ a:hover
             margin: 5px 5px;
             font-size: 12px;
             padding: 2px 0 0;
+            font-size: 16px;
         }
 
         &_logo
         {
             padding: 0px;
+            margin-top: 3px;
+        }
+
+        &_buildings
+        {
+            padding: 0;
+        }
+
+        &_building
+        {
+            display: block;
+            list-style: none;
+            color:$colorwhite;
+            padding: 10px 5px;
+            background: $colorgreen;
+            border-width: 1px;
+            border-color: $colorwhite;
         }
     }
 
