@@ -320,6 +320,35 @@ a:hover {
   font-size: 30px;
   font-weight: 600;
 }
+
+.main__slide3_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 65px auto 0;
+  padding: 0 0 0 215px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 860px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main__slide3_item {
+  width: 25%;
+}
+
+.main__slide3_img {
+  display: block;
+  margin: 0 auto;
+}
+
+.main__slide3_text {
+  width: 180px;
+  margin: 20px auto 0;
+  text-align: center;
+}
 @supports (-webkit-appearance:none){
 
 }
