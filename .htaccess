@@ -1,0 +1,10 @@
+DirectoryIndex index.php
+ErrorDocument 403 /403.php
+ErrorDocument 404 /404.php
+
+RewriteEngine On  
+  
+RewriteCond %{SCRIPT_FILENAME} !-d  
+RewriteCond %{SCRIPT_FILENAME} !-f  
+
+RewriteRule ^(.*)$ ./index.php?route=$1
