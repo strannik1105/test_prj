@@ -1,4 +1,3 @@
-
 <?php
 	if(($_SERVER['REQUEST_URI'] != '/') &&  ($_SERVER['REQUEST_URI'] != '/index.php'))
 	{
@@ -9,6 +8,7 @@
 
 
 	$config = parse_ini_file('menuconf.ini', true);
+	
 	if(!array_key_exists('home', $config))
 	{
 		header($_SERVER['SERVER_PROTOCOL']." 404 Not Found");
@@ -132,12 +132,12 @@
                                     и мы с Вами свяжемся
                                 </h2>
                             </div>
-                            <form class="main__slide1_form">
+                            <form class="main__slide1_form" id="form">
                                 <p class="main__slide1_form_text">
                                     Сообщите свой номер телефона, и<br>мы Вам перезвоним: <span style="color: #9cf50d">*</span>
                                 </p>
                                 <input type="tel" class="main__slide1_form_phone" placeholder="+7 (913) 123-45-66" required>
-                                <input type="submit" class="main__slide1_form_button" value="ОТПРАВИТЬ">
+                                <input id="form_submit" type="submit" class="main__slide1_form_button" value="ОТПРАВИТЬ">
                                 <p class="main__slide1_form_text">
                                     <span style="color: #9cf50d">*</span> "Заявка в 1 клик" ни к чему Вас не<br>
                                     обязывает, но позволяет сэкономить время.<br>
