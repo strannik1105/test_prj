@@ -1,5 +1,13 @@
 
 <?php
+	if(($_SERVER['REQUEST_URI'] != '/') &&  ($_SERVER['REQUEST_URI'] != '/index.php'))
+	{
+		header($_SERVER['SERVER_PROTOCOL']." 404 Not Found");
+		require '404.php';
+		exit;
+	}
+
+
 	$config = parse_ini_file('menuconf.ini', true);
 	if(!array_key_exists('home', $config))
 	{
