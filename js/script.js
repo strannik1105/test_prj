@@ -16,32 +16,19 @@ if(buildings_menu)
     }
 }
 
-$(document).ready(function ()
+$('#form').submit(function(e)
 {
-    $('#form').submit(function(e)
-    {
-		let form = $('#form')[0];
-		let data = new FormData(form);
-		$.ajax({
-            type: "POST",
-            enctype: 'multipart/form-data',
-            url: "/send.php",
-            data: data,
-            processData: false,
-            contentType: false,
-            cache: false,
-            timeout: 800000,
-            success: function () 
-			{
-                console.log("SUCCESS : ");
-            },
-            error: function (e) 
-			{
-                console.log("ERROR : ");
-            }
-        });
-        return false;
-    })
+	let form = $('#form')[0];
+	let phone = $('#phone')[0].value;
+	$.post('/send.php', {'phone': $('#phone')[0].value}, function(data){
+		$('#top_text')[0].setAttribute('hidden', true);
+		$('#phone')[0].setAttribute('hidden', true);
+		$('#form_submit')[0].setAttribute('hidden', true);
+		$('#bottom_text')[0].setAttribute('hidden', true);
+		$('#success')[0].removeAttribute('hidden');
+		return false;
+	});
+	return false;
 })
 
 /*let buildings_menu = document.querySelectorAll('.header__menu_item_button');
@@ -72,9 +59,10 @@ if(form)
     form.onsubmit = function()
     {
         let phone = document.querySelector('.main__slide1_form_phone');
+		let data = new FormData(form);
 		let responce = fetch('send.php', {
             method: 'POST',
-            body: new FormData(form),
+            body: data,
         });  
         return false;
     }

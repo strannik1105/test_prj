@@ -1,8 +1,20 @@
 <?php
 	if(($_SERVER['REQUEST_URI'] != '/') &&  ($_SERVER['REQUEST_URI'] != '/index.php'))
 	{
-		header($_SERVER['SERVER_PROTOCOL']." 404 Not Found");
-		require '404.php';
+		if($_SERVER['REQUEST_URI'] == '/send.php')
+		{
+			if(array_key_exists('HTTP_X_REQUESTED_WITH', $_SERVER))
+			{
+				if(strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest')
+				{					
+					include 'send.php';
+					exit;
+				}
+			}
+			include '403.php';
+			exit;
+		}
+		include '404.php';
 		exit;
 	}
 
@@ -11,8 +23,7 @@
 	
 	if(!array_key_exists('home', $config))
 	{
-		header($_SERVER['SERVER_PROTOCOL']." 404 Not Found");
-		require '404.php';
+		include '404.php';
 		exit;
 	}
 ?>
@@ -132,17 +143,20 @@
                                     и мы с Вами свяжемся
                                 </h2>
                             </div>
-                            <form class="main__slide1_form" id="form">
-                                <p class="main__slide1_form_text">
+                            <form class="main__slide1_form" enctype="multipart/form-data" id="form">
+                                <p id="top_text" class="main__slide1_form_text">
                                     Сообщите свой номер телефона, и<br>мы Вам перезвоним: <span style="color: #9cf50d">*</span>
                                 </p>
-                                <input type="tel" class="main__slide1_form_phone" placeholder="+7 (913) 123-45-66" required>
+                                <input id="phone" type="tel" class="main__slide1_form_phone" placeholder="+7 (913) 123-45-66" required>
                                 <input id="form_submit" type="submit" class="main__slide1_form_button" value="ОТПРАВИТЬ">
-                                <p class="main__slide1_form_text">
+                                <p id="bottom_text" class="main__slide1_form_text">
                                     <span style="color: #9cf50d">*</span> "Заявка в 1 клик" ни к чему Вас не<br>
                                     обязывает, но позволяет сэкономить время.<br>
                                     Детали заказа мы запишем сами, позвонив<br>
                                     Вам по указанному номеру телефона.
+                                </p>
+								<p id='success' class="main__slide1_form_text" hidden="true">
+                                    <span style="font-size: 32px; color: #fcfdff;">Заявка успешно принята</span>
                                 </p>
                             </form>
                         </div>

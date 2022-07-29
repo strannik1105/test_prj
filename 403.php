@@ -1,5 +1,5 @@
 <?php
-	header($_SERVER['SERVER_PROTOCOL']." 404 Not Found");
+	header($_SERVER['SERVER_PROTOCOL']." 403 Access Denied");
 	$config = parse_ini_file('menuconf.ini', true);
 ?>
 
@@ -94,8 +94,8 @@
         </div>
     </header>
 	<main class="main">
-		<h1> 404 </h1>
-		<h2> Not Found </h2>
+		<h1> 403 </h1>
+		<h2> Access Denied </h2>
 	</main>
     <footer class="footer">
         <div class="footer__top">
