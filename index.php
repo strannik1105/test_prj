@@ -65,7 +65,7 @@
 					if(array_key_exists('home', $config))
 					{
 						echo('<li class="header__menu_item header__menu_logo">
-                <a href="#top"><img src="img/home.png" alt="" class="header__menu_logo"></a>
+                <a href="#top"><img src="img/home.png" alt="" class="header__menu_logo"></a><ul class="header__menu_buildings" hidden="true" num="0"></ul>
             </li>');
 						unset($config['home']);
 					}
@@ -75,7 +75,7 @@
 						require '404.php';
 						exit;
 					}
-					$count = 0;
+					$count = 1;
 					foreach($config as $i)
 					{
 						echo('<li class="header__menu_item">

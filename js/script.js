@@ -1,4 +1,4 @@
-let buildings_menu = document.querySelectorAll('.header__menu_item_button');
+let buildings_menu = document.querySelectorAll('.header__menu_item');
 
 if(buildings_menu)
 {
