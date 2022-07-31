@@ -21,6 +21,8 @@
 
 	$config = parse_ini_file('menuconf.ini', true);
 	
+	$config['home'] = array('url' => '/');
+	
 	if(!array_key_exists('home', $config))
 	{
 		include '404.php';
@@ -58,6 +60,24 @@
     </head>
 
 <body>
+	<div class="modal" hidden="true">
+        <form class="main__slide1_form modal__form" id="form">
+            <div class="modal__container">
+                <p class="main__slide1_form_text">
+                    Сообщите свой номер телефона, и<br>мы Вам перезвоним: <span style="color: #9cf50d">*</span>
+                </p>
+                <img src="img/close.png" alt="закрыть" class="modal__close">
+            </div>
+            <input type="tel" class="main__slide1_form_phone" placeholder="+7 (913) 123-45-66" required>
+            <input type="submit" class="main__slide1_form_button" value="ОТПРАВИТЬ" onsubmit="return false;">
+            <p class="main__slide1_form_text">
+                <span style="color: #9cf50d">*</span> "Заявка в 1 клик" ни к чему Вас не<br>
+                обязывает, но позволяет сэкономить время.<br>
+                Детали заказа мы запишем сами, позвонив<br>
+                Вам по указанному номеру телефона.
+            </p>
+        </form>
+    </div>
 	<a name="top"></a>
     <div class="header__top">
         <ul class="header__menu">
@@ -112,7 +132,7 @@
                     <a href="tel:573-003" class="header__phone_number header__phone_number-bottom">573-003</a>
                 </div>    
             </div>
-            <a href="#" class="button header__button">
+            <a class="button header__button modal_button">
                 ЗАКАЗАТЬ ЗВОНОК
             </a>
         </div>
@@ -363,7 +383,7 @@
                     <p class="footer__top_contact_text">Остались вопросы?</p>
                     <p class="footer__top_contact_text">Позвоните прямо сейчас!</p>
                 </div>
-                <a href="#" class="button footer__button">
+                <a class="button footer__button modal_button">
                     ЗАКАЗАТЬ ЗВОНОК
                 </a>
             </div>

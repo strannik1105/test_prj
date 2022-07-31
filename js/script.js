@@ -31,6 +31,17 @@ $('#form').submit(function(e)
 	return false;
 })
 
+$(".modal_button").click(function() {
+	if($('.modal')[0].getAttribute('hidden') == 'true')
+	{
+		$('.modal')[0].removeAttribute('hidden');
+	}
+});
+
+$(".modal__close").click(function() {
+	$('.modal')[0].setAttribute('hidden', 'true');
+});
+
 /*let buildings_menu = document.querySelectorAll('.header__menu_item_button');
 
 if(buildings_menu)

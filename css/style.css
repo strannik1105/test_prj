@@ -623,6 +623,30 @@ a:hover {
   background: url("../img/line.png");
 }
 
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #9C78A4;
+  z-index: 999;
+}
+
+.modal__form {
+  margin: 25vh auto;
+}
+
+.modal__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.modal__close {
+  height: 32px;
+  margin-left: auto;
+}
+
 @media (max-width: 1200px) {
   .main__slide1 {
     height: 1160px;
@@ -672,6 +696,10 @@ a:hover {
 
   .main__slide2_button {
     margin: 40px auto;
+  }
+
+  .modal__form {
+    margin: 25vh auto;
   }
 }
 
