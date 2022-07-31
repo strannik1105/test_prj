@@ -61,15 +61,15 @@
 
 <body>
 	<div class="modal" hidden="true">
-        <form class="main__slide1_form modal__form" id="form">
-            <div class="modal__container">
+        <form class="main__slide1_form modal__form" id="modal_form">
+            <div id="modal_container" class="modal__container">
                 <p class="main__slide1_form_text">
                     Сообщите свой номер телефона, и<br>мы Вам перезвоним: <span style="color: #9cf50d">*</span>
                 </p>
                 <img src="img/close.png" alt="закрыть" class="modal__close">
             </div>
-            <input type="tel" class="main__slide1_form_phone" placeholder="+7 (913) 123-45-66" required>
-            <input type="submit" class="main__slide1_form_button" value="ОТПРАВИТЬ" onsubmit="return false;">
+            <input id="modal_phone" type="tel" class="main__slide1_form_phone" placeholder="+7 (913) 123-45-66" required>
+            <input id="modal_submit" type="submit" class="main__slide1_form_button" value="ОТПРАВИТЬ" onsubmit="return false;">
             <p class="main__slide1_form_text">
                 <span style="color: #9cf50d">*</span> "Заявка в 1 клик" ни к чему Вас не<br>
                 обязывает, но позволяет сэкономить время.<br>

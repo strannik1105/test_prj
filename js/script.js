@@ -42,6 +42,16 @@ $(".modal__close").click(function() {
 	$('.modal')[0].setAttribute('hidden', 'true');
 });
 
+$('#modal_form').submit(function(e)
+{
+	let form = $('.modal')[0];
+	$.post('/send.php', {'phone': $('#modal_phone')[0].value}, function(data){
+		form.setAttribute('hidden', 'true');
+		return false;
+	});
+	return false;
+})
+
 /*let buildings_menu = document.querySelectorAll('.header__menu_item_button');
 
 if(buildings_menu)
