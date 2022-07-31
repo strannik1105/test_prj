@@ -379,6 +379,33 @@ a:hover {
   display: block;
   width: 30%;
   margin: 5px 15px;
+  position: relative;
+}
+
+.main__slide2_gallery_item :before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 306px;
+  height: 191px;
+  background: rgba(113, 64, 124, 0.5);
+  opacity: 0;
+}
+
+.main__slide2_gallery_item :before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 306px;
+  height: 191px;
+  background: url("../img/gallery-img.png");
+  opacity: 0;
+}
+
+.main__slide2_gallery_item :hover:before {
+  opacity: 1;
 }
 
 .main__slide2_gallery_img {
@@ -1013,6 +1040,7 @@ a:hover {
   }
 }
 @supports (-webkit-appearance:none){
+.main__slide2_gallery_item :before{background:url("../img/gallery-img.webp")}
 .main__slide3{background:url(../img/slide3-background.webp) repeat}
 .line-down-left:before{background:url("../img/line.webp")}
 .line-down-right:before{background:url("../img/line.webp")}
