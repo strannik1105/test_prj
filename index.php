@@ -19,9 +19,14 @@
 	}
 
 
-	$config = parse_ini_file('menuconf.ini', true);
+	//$config = parse_ini_file('menuconf.ini', true);
 	
 	$config['home'] = array('url' => '/');
+	$config['buildings'] = array('name' => 'ЗДАНИЯ ИЗ ЛМК', 'url' => '#', '0' => 'Building1', '1' => 'Building2', '2' => 'Building2');
+	$config['portfolio'] = array('name' => 'ПОРТФОЛИО', 'url' => '#');
+	$config['aboutus'] = array('name' => 'О НАС', 'url' => '#');
+	$config['order'] = array('name' => 'ЗАКАЗ', 'url' => '#');
+	$config['contacts'] = array('name' => 'КОНТАКТЫ', 'url' => '#');
 	
 	if(!array_key_exists('home', $config))
 	{
@@ -233,15 +238,42 @@
                 <h2 class="main__slide3_title main__slide2_gallery_title">ЗДАНИЯ ИЗ ЛМК, КОТОРЫЕ МЫ ПОСТРОИЛИ, СЭКОНИМИЛИ ЗАКАЗЧИКАМ СРЕДСТВА И ПОСТАВИЛИ ИХ БИЗНЕС НА НОГИ</h2>
                 <img src="img/split.png" alt="" class="main__split">
                 <div class="main__slide2_gallery_container">
-                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image1.png"><img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image1.png" /></a>
-                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image2.png"><img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image2.png" /></a>
-                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image3.png"><img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image3.png" /></a>
-                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image4.png"><img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image4.png" /></a>
-                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image1.png"><img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image1.png" /></a>
-                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image2.png"><img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image2.png" /></a>
-                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image3.png"><img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image3.png" /></a>
-                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image4.png"><img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image4.png" /></a>
-                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image1.png"><img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image1.png" /></a>
+                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image1.png">
+						<img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image1.png" />
+                        <img src="img/gallery-img.png" alt="" class="main__slide2_gallery_img_hover" hidden="true">
+					</a>
+                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image2.png">
+						<img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image2.png" />
+                        <img src="img/gallery-img.png" alt="" class="main__slide2_gallery_img_hover" hidden="true">
+					</a>
+                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image3.png">
+						<img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image3.png" />
+                        <img src="img/gallery-img.png" alt="" class="main__slide2_gallery_img_hover" hidden="true">
+					</a>
+                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image4.png">
+						<img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image4.png" />
+                        <img src="img/gallery-img.png" alt="" class="main__slide2_gallery_img_hover" hidden="true">
+					</a>
+                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image1.png">
+						<img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image1.png" />
+                        <img src="img/gallery-img.png" alt="" class="main__slide2_gallery_img_hover" hidden="true">
+					</a>
+                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image2.png">
+						<img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image2.png" />
+                        <img src="img/gallery-img.png" alt="" class="main__slide2_gallery_img_hover" hidden="true">
+					</a>
+                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image3.png">
+						<img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image3.png" />
+                        <img src="img/gallery-img.png" alt="" class="main__slide2_gallery_img_hover" hidden="true">
+					</a>
+                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image4.png">
+						<img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image4.png" />
+                        <img src="img/gallery-img.png" alt="" class="main__slide2_gallery_img_hover" hidden="true">
+					</a>
+                    <a class="main__slide2_gallery_item" rel="item" href="img/gallery-image1.png">
+						<img class="main__slide2_gallery_img" alt="item1" src="img/gallery-image1.png" />
+                        <img src="img/gallery-img.png" alt="" class="main__slide2_gallery_img_hover" hidden="true">
+					</a>
                 </div>
             </div>
             <div class="header__bottom">

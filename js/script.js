@@ -16,6 +16,26 @@ if(buildings_menu)
     }
 }
 
+let gallery_items = document.querySelectorAll('.main__slide2_gallery_item');
+
+if(gallery_items)
+{
+	let hover = document.querySelectorAll('.main__slide2_gallery_img_hover');
+	
+	for(let i = 0; i < gallery_items.length; i++)
+	{
+		gallery_items[i].onmouseover = function()
+		{
+			hover[i].removeAttribute('hidden');
+		}
+		gallery_items[i].onmouseout = function()
+		{
+			hover[i].setAttribute('hidden', 'true');
+		}
+	}
+}
+
+
 $('#form').submit(function(e)
 {
 	let form = $('#form')[0];
